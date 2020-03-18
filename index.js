@@ -4,8 +4,11 @@ const PORT = process.env.PORT || 8080;
 var app = express();
 const router = express.Router();
 
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+
 router.get('/', function(req,res){
-    res.sendFile(path.join(__dirname + '/views/index.html'))
+    res.sendFile(path.join(__dirname + 'views/index.html'))
 })
 
 app.listen(PORT, ()=>{

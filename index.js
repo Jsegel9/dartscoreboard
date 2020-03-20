@@ -8,7 +8,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 router.get('/', function(req,res){
-    res.sendFile(path.join(__dirname + 'views/index.html'))
+    res.sendFile(path.join(__dirname + "/index.html"))
 })
 
 app.listen(PORT, ()=>{

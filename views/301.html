@@ -19,14 +19,21 @@
         </h1>
     </header>
     <div class="container">
+        <!-- <div class="row">
+            <button id="newGame">New Game</button>
+        </div> -->
         <div class="scoreboard">
+            <div class="row">
+                <button id="newGame">New Game</button>
+            </div>
             <div class="ply1">
                 <div class="row">
                     <div class="col-sm">
                         <h1>Player 1</h1>
                     </div>
                     <div class="col-sm">
-                        <h2 class="p1score">Score: </h2>
+                        <h2>Score:</h2>
+                        <h2 class="p1score">0</h2>
                     </div>
                 </div>
                 <div class="p1btns">
@@ -59,7 +66,8 @@
                         <h1>Player 2</h1>
                     </div>
                     <div class="col-sm">
-                        <h2 class="p2score">Score:</h2>
+                        <h2>Score:</h2>
+                        <h2 class="p2score">0</h2>
                     </div>
                 </div>
                 <div class="p2btns">
@@ -88,5 +96,21 @@
         </div>
     </div>
 </body>
+<script>
 
+var initScore1 = 301;
+var initScore2 = 301;
+
+$("#newGame").click(function(){
+    $(".p1score").text(initScore1)
+    $(".p2score").text(initScore2)
+})
+
+// var newGame = function(){
+//     $(".p1score").text(initScore1)
+// }
+
+// $(".p1score").text(initScore1;)
+
+</script>
 </html>

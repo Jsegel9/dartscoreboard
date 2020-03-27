@@ -121,7 +121,7 @@ $(".scoreBtn1").click(function(){
 $(".scoreBtn2").click(function(){
     var scoreClick = $(this).val();
     console.log(scoreClick);
-    score1 = (score2 - scoreClick);
+    score2 = (score2 - scoreClick);
     $(".p2score").text(score2)
     if(score2 < 1){
         alert("Player 2 Wins")

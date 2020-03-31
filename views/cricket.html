@@ -1,20 +1,204 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- <script type="text/javascript" src="../public/assets/js/script.js"></script> -->
     <script src="https://code.jquery.com/jquery.js"></script>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">    <title>Darts</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Darts</title>
 </head>
+
 <body>
     <header>
         <h1>
             Dart App
         </h1>
     </header>
-    <div class="mainContent">
-        Cricket
+    <div class="container">
+        <div class="scoreboard">
+            <div class="row">
+                <button id="newGame">
+                    New Game
+                </button>
+            </div>
+            <div class="row" id="gameArea">
+                <div class="col" id="p1Area">
+                    <div class="row" id="p1Name">
+                        <h1>Player 1</h1>
+                    </div>
+                    <div class="row" id="p1Score">
+                        <h2>Score: </h2>
+                    </div>
+                    <div class="row" id="p120">
+                        <div class="col" id="p120pts">
+                            #
+                        </div>
+                        <div class="col" id="p120Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p120btn">
+                            <button value="20">20</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p119">
+                        <div class="col" id="p119pts">
+                            #
+                        </div>
+                        <div class="col" id="p119Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p119btn">
+                            <button value="19">19</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p118">
+                        <div class="col" id="p118pts">
+                            #
+                        </div>
+                        <div class="col" id="p118Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p118btn">
+                            <button value="18">18</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p117">
+                        <div class="col" id="p117pts">
+                            #
+                        </div>
+                        <div class="col" id="p117Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p117btn">
+                            <button value="17">17</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p116">
+                        <div class="col" id="p116pts">
+                            #
+                        </div>
+                        <div class="col" id="p116Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p116btn">
+                            <button value="16">16</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p115">
+                        <div class="col" id="p115pts">
+                            #
+                        </div>
+                        <div class="col" id="p115Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p115btn">
+                            <button value="15">15</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p1Bl">
+                        <div class="col" id="p1BlPts">
+                            #
+                        </div>
+                        <div class="col" id="p1BlImgs">
+                            #
+                        </div>
+                        <div class="col" id="p1Blbtn">
+                            <button value="25">BullsEye</button>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col" id="p2Area">
+                    <div class="row" id="p2Name">
+                        <h1>Player 2</h1>
+                    </div>
+                    <div class="row" id="p2Score">
+                        <h2>Score: </h2>
+                    </div>
+                    <div class="row" id="p220">
+                        <div class="col" id="p220pts">
+                            #
+                        </div>
+                        <div class="col" id="p220Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p220btn">
+                            <button value="20">20</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p219">
+                        <div class="col" id="p219pts">
+                            #
+                        </div>
+                        <div class="col" id="p219Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p219btn">
+                            <button value="19">19</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p218">
+                        <div class="col" id="p218pts">
+                            #
+                        </div>
+                        <div class="col" id="p218Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p218btn">
+                            <button value="18">18</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p217">
+                        <div class="col" id="p217pts">
+                            #
+                        </div>
+                        <div class="col" id="p217Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p217btn">
+                            <button value="17">17</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p216">
+                        <div class="col" id="p216pts">
+                            #
+                        </div>
+                        <div class="col" id="p216Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p216btn">
+                            <button value="16">16</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p215">
+                        <div class="col" id="p215pts">
+                            #
+                        </div>
+                        <div class="col" id="p215Imgs">
+                            #
+                        </div>
+                        <div class="col" id="p215btn">
+                            <button value="15">15</button>
+                        </div>
+                    </div>
+                    <div class="row" id="p2Bl">
+                        <div class="col" id="p2BlPts">
+                            #
+                        </div>
+                        <div class="col" id="p2BlImgs">
+                            #
+                        </div>
+                        <div class="col" id="p2Blbtn">
+                            <button value="25">BullsEye</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>

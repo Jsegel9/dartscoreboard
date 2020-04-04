@@ -232,70 +232,77 @@
     var p120Count = 0;
     var p220Count = 0;
     var p1BlCount = 0;
-    var p2BlCount = 0;    
+    var p2BlCount = 0;
 
 
-    $("#newGame").click(function(){
-    var score1 = 0;
-    var score2 = 0;
-    var p120Closed = false;
-    var p220Closed = false;
-    var p119Closed = false;
-    var p219Closed = false;
-    var p118Closed = false;
-    var p218Closed = false;
-    var p117Closed = false;
-    var p217Closed = false;
-    var p116Closed = false;
-    var p216Closed = false;
-    var p115Closed = false;
-    var p215Closed = false;
-    var p1BlClosed = false;
-    var p2BlClosed = false; 
-    $("#p1score").text(score1);
-    $("#p2score").text(score2);
-    })
 
-    $("#p120btn").click(function(){
-        console.log(p120Closed);
-        console.log(score1);
+
+    $("#newGame").click(function () {
+        var score1 = 0;
+        var score2 = 0;
+        var p120Closed = false;
+        var p220Closed = false;
+        var p119Closed = false;
+        var p219Closed = false;
+        var p118Closed = false;
+        var p218Closed = false;
+        var p117Closed = false;
+        var p217Closed = false;
+        var p116Closed = false;
+        var p216Closed = false;
+        var p115Closed = false;
+        var p215Closed = false;
+        var p1BlClosed = false;
+        var p2BlClosed = false;
+        $("#p1score").text(score1);
+        $("#p2score").text(score2);
         
-        var scoreClick = $(this).val();
-        if(p120Closed === true){
-            if(p220Closed === false){
-                score1 = (score1 + parseFloat(scoreClick))
-            $("#p1score").text(score1)
-            }
-        } else {
-            if (p120Count === 0){
-                p120Count = 1;
-                $("#p120Imgs").text("/");
-            } else if (p120Count === 1){
-                p120Count = 2;
-                $("#p120Imgs").text("X");
-            } else if (p120Count === 2){
-                p120Count = 3;
-                p120Closed = true;
-                $("#p120Imgs").text("(X)");
-            }
-        }
-    })
+        // score button click functions
+        // id="p120pts"
 
-    $("#p220btn").click(function(){
+        $("#p120btn").click(function () {
+            console.log(p120Closed);
+            console.log(score1);
+            var localScore = '';
+            var scoreClick = $(this).val();
+
+            if (p120Closed === true) {
+                if (p220Closed === false) {
+                    score1 = (score1 + parseFloat(scoreClick));
+                    localScore = (localScore + parseFloat(scoreClick));
+                    $("#p1score").text(score1);
+                    $("#p120pts").text(localScore);
+                }
+            } else {
+                if (p120Count === 0) {
+                    p120Count = 1;
+                    $("#p120Imgs").text("/");
+                } else if (p120Count === 1) {
+                    p120Count = 2;
+                    $("#p120Imgs").text("X");
+                } else if (p120Count === 2) {
+                    p120Count = 3;
+                    p120Closed = true;
+                    $("#p120Imgs").text("(X)");
+                }
+            }
+        })
+        
+    $("#p220btn").click(function () {
         var scoreClick = $(this).val();
-        if (p220Closed === true){
-            if (p120Closed === false){
+        if (p220Closed === true) {
+            if (p120Closed === false) {
                 score2 = (score2 + parseFloat(scoreClick));
                 $("#p2score").text(score2);
             }
         } else {
-            if (p220Count === 0){
+            if (p220Count === 0) {
                 p220Count = 1;
                 $("#p220Imgs").text("/");
-            } else if (p220Count === 1){
+            } else if (p220Count === 1) {
                 p220Count = 2;
                 $("#p220Imgs").text("X");
-            } else if (p220Count === 2){
+            } else if (p220Count === 2) {
                 p220Count = 3;
                 p220Closed = true;
                 $("#p220Imgs").text("(X)")
@@ -303,5 +310,58 @@
         }
     })
 
+
+
+        //end
+    })
+
+    // $("#p120btn").click(function(){
+    //     console.log(p120Closed);
+    //     console.log(score1);
+
+    //     var scoreClick = $(this).val();
+    //     if(p120Closed === true){
+    //         if(p220Closed === false){
+    //             score1 = (score1 + parseFloat(scoreClick))
+    //         $("#p1score").text(score1)
+    //         }
+    //     } else {
+    //         if (p120Count === 0){
+    //             p120Count = 1;
+    //             $("#p120Imgs").text("/");
+    //         } else if (p120Count === 1){
+    //             p120Count = 2;
+    //             $("#p120Imgs").text("X");
+    //         } else if (p120Count === 2){
+    //             p120Count = 3;
+    //             p120Closed = true;
+    //             $("#p120Imgs").text("(X)");
+    //         }
+    //     }
+    // })
+
+    // $("#p220btn").click(function () {
+    //     var scoreClick = $(this).val();
+    //     if (p220Closed === true) {
+    //         if (p120Closed === false) {
+    //             score2 = (score2 + parseFloat(scoreClick));
+    //             $("#p2score").text(score2);
+    //         }
+    //     } else {
+    //         if (p220Count === 0) {
+    //             p220Count = 1;
+    //             $("#p220Imgs").text("/");
+    //         } else if (p220Count === 1) {
+    //             p220Count = 2;
+    //             $("#p220Imgs").text("X");
+    //         } else if (p220Count === 2) {
+    //             p220Count = 3;
+    //             p220Closed = true;
+    //             $("#p220Imgs").text("(X)")
+    //         }
+    //     }
+    // })
+
 </script>
+
 </html>

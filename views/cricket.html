@@ -203,114 +203,200 @@
     </div>
 </body>
 <script>
-    var score1 = 0;
-    var score2 = 0;
-    var p120Closed = false;
-    var p220Closed = false;
-    var p119Closed = false;
-    var p219Closed = false;
-    var p118Closed = false;
-    var p218Closed = false;
-    var p117Closed = false;
-    var p217Closed = false;
-    var p116Closed = false;
-    var p216Closed = false;
-    var p115Closed = false;
-    var p215Closed = false;
-    var p1BlClosed = false;
-    var p2BlClosed = false;
-    var p115Count = 0;
-    var p215Count = 0;
-    var p116Count = 0;
-    var p216Count = 0;
-    var p117Count = 0;
-    var p217Count = 0;
-    var p118Count = 0;
-    var p218Count = 0;
-    var p119Count = 0;
-    var p219Count = 0;
-    var p120Count = 0;
-    var p220Count = 0;
-    var p1BlCount = 0;
-    var p2BlCount = 0;
 
+    var player1 = {
+    score: 0,
+    twty: {
+        count: 0,
+        closed: false
+    },
+    ninetn: {
+        count: 0,
+        closed: false
+    },
+    eighttn: {
+        count: 0,
+        closed: false
+    },
+    svntn: {
+        count: 0,
+        closed: false
+    },
+    sixtn: {
+        count: 0,
+        closed: false
+    },
+    fiftn: {
+        count: 0,
+        closed: false
+    },
+    bull: {
+        count: 0,
+        closed: false
+    }
+}
 
-
+var player2 = {
+    score: 0,
+    twty: {
+        count: 0,
+        closed: false
+    },
+    ninetn: {
+        count: 0,
+        closed: false
+    },
+    eighttn: {
+        count: 0,
+        closed: false
+    },
+    svntn: {
+        count: 0,
+        closed: false
+    },
+    sixtn: {
+        count: 0,
+        closed: false
+    },
+    fiftn: {
+        count: 0,
+        closed: false
+    },
+    bull: {
+        count: 0,
+        closed: false
+    }
+}
 
     $("#newGame").click(function () {
-        var score1 = 0;
-        var score2 = 0;
-        var p120Closed = false;
-        var p220Closed = false;
-        var p119Closed = false;
-        var p219Closed = false;
-        var p118Closed = false;
-        var p218Closed = false;
-        var p117Closed = false;
-        var p217Closed = false;
-        var p116Closed = false;
-        var p216Closed = false;
-        var p115Closed = false;
-        var p215Closed = false;
-        var p1BlClosed = false;
-        var p2BlClosed = false;
-        $("#p1score").text(score1);
-        $("#p2score").text(score2);
+        player1.score = 0;
+        player1.twty.count = 0;
+        player1.twty.closed = false;
+        player1.ninetn.count = 0;
+        player1.ninetn.closed = false;
+        player1.eighttn.count = 0;
+        player1.eighttn.closed = false;
+        player1.svntn.count = 0;
+        player1.svntn.closed = false;
+        player1.sixtn.count = 0;
+        player1.sixtn.closed = false;
+        player1.fiftn.count = 0;
+        player1.fiftn.closed = false;
+        player1.bull.count = 0;
+        player1.bull.closed = false;
+        
+        player2.score = 0;
+        player2.twty.count = 0;
+        player2.twty.closed = false;
+        player2.ninetn.count = 0;
+        player2.ninetn.closed = false;
+        player2.eighttn.count = 0;
+        player2.eighttn.closed = false;
+        player2.svntn.count = 0;
+        player2.svntn.closed = false;
+        player2.sixtn.count = 0;
+        player2.sixtn.closed = false;
+        player2.fiftn.count = 0;
+        player2.fiftn.closed = false;
+        player2.bull.count = 0;
+        player2.bull.closed = false;
         
         // score button click functions
         // id="p120pts"
 
         $("#p120btn").click(function () {
-            console.log(p120Closed);
-            console.log(score1);
-            var localScore = '';
+            // console.log(p120Closed);
+            // console.log(score1);
+            // var localScore = '';
             var scoreClick = $(this).val();
-
-            if (p120Closed === true) {
-                if (p220Closed === false) {
-                    score1 = (score1 + parseFloat(scoreClick));
-                    localScore = (localScore + parseFloat(scoreClick));
-                    $("#p1score").text(score1);
-                    $("#p120pts").text(localScore);
+            player1.twty.count ++;
+            if (player1.twty.closed === true) {
+                if (player2.twty.closed === false) {
+                    player1.score = (player1.score + parseFloat(scoreClick));
+                    var p120pts = (player1.twty.count - 3) * 20;
+                    $("#p1score").text(player1.score);
+                    $("#p120pts").text(p120pts);
                 }
             } else {
-                if (p120Count === 0) {
-                    p120Count = 1;
+                if (player1.twty.count === 1) {
+                    // player1.twty.count = 1;
                     $("#p120Imgs").text("/");
-                } else if (p120Count === 1) {
-                    p120Count = 2;
+                } else if (player1.twty.count === 2) {
+                    // player1.twty.count = 2;
                     $("#p120Imgs").text("X");
-                } else if (p120Count === 2) {
-                    p120Count = 3;
-                    p120Closed = true;
+                } else if (player1.twty.count === 3) {
+                    // player1.twty.count = 3;
+                    player1.twty.closed = true;
                     $("#p120Imgs").text("(X)");
-                }
+                } 
             }
         })
         
     $("#p220btn").click(function () {
         var scoreClick = $(this).val();
-        if (p220Closed === true) {
-            if (p120Closed === false) {
-                score2 = (score2 + parseFloat(scoreClick));
-                $("#p2score").text(score2);
+        player2.twty.count ++;
+        if (player2.twty.closed === true) {
+            if (player1.twty.closed === false) {
+                player2.score = (player2.score + parseFloat(scoreClick));
+                var p220pts = (player2.twty.count - 3) * 20;
+                $("#p2score").text(player2.score);
+                $("#p220pts").text(p220pts);
             }
         } else {
-            if (p220Count === 0) {
-                p220Count = 1;
+            if (player2.twty.count === 1) {
                 $("#p220Imgs").text("/");
-            } else if (p220Count === 1) {
-                p220Count = 2;
+            } else if (player2.twty.count === 2) {
                 $("#p220Imgs").text("X");
-            } else if (p220Count === 2) {
-                p220Count = 3;
-                p220Closed = true;
+            } else if (player2.twty.count === 3) {
+                player2.twty.closed = true;
                 $("#p220Imgs").text("(X)")
             }
         }
     })
 
+$("#p119btn").click(function(){
+    var scoreClick = $(this).val();
+    player1.ninetn.count ++;
+    if (player1.ninetn.closed === true){
+        if(player2.ninetn.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p119pts = (player1.ninetn.count - 3) * 19;
+            $("#p1score").text(player1.score);
+            $("#p119pts").text(p119pts);
+        }
+    } else {
+        if (player1.ninetn.count === 1){
+            $("#p119Imgs").text("/");
+        } else if (player1.ninetn.count === 2){
+            $("#p119Imgs").text("X");
+        } else if (player1.ninetn.count === 3){
+            player1.ninetn.closed = true;
+            $("#p119Imgs").text("(X)")
+        }
+    }
+})
 
+$("#p219btn").click(function(){
+    var scoreClick = $(this).val();
+    player2.ninetn.count ++;
+    if(player2.ninetn.closed === true){
+        if(player1.ninetn.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p219pts = (player2.ninetn.count - 3) *19;
+            $("#p2score").text(player2.score);
+            $("#p219pts").text(p219pts);
+        }
+    } else {
+        if (player2.ninetn.count === 1){
+            $("#p219Imgs").text("/");
+        } else if (player2.ninetn.count === 2){
+            $("#p219Imgs").text("X");
+        } else if (player2.ninetn.count === 3){
+            player2.ninetn.closed = true;
+            $("#p219Imgs").text("(X)")
+        }
+    }
+})
 
         //end
     })

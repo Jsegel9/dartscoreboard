@@ -304,6 +304,7 @@ var player2 = {
         // score button click functions
         // id="p120pts"
 
+
         $("#p120btn").click(function () {
             // console.log(p120Closed);
             // console.log(score1);
@@ -394,6 +395,226 @@ $("#p219btn").click(function(){
         } else if (player2.ninetn.count === 3){
             player2.ninetn.closed = true;
             $("#p219Imgs").text("(X)")
+        }
+    }
+})
+
+$('#p118btn').click(function(){
+    var scoreClick = $(this).val();
+    player1.eighttn.count ++;
+    if(player1.eighttn.closed === true){
+        if(player2.eighttn.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p118pts = (player1.eighttn.count - 3) * 18;
+            $('#p1score').text(player1.score);
+            $('#p118pts').text(p118pts);
+        }
+    } else {
+        if (player1.eighttn.count === 1){
+            $('#p118Imgs').text('/');
+        } else if (player1.eighttn.count === 2){
+            $('#p118Imgs').text('X');
+        } else if (player1.eighttn.count === 3){
+            player1.eighttn.closed = true;
+            $('#p118Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p218btn').click(function(){
+    var scoreClick = $(this).val();
+    player2.eighttn.count ++;
+    if(player2.eighttn.closed === true){
+        if(player1.eighttn.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p218pts = (player2.eighttn.count - 3) * 18;
+            $('#p2score').text(player2.score);
+            $('#p218pts').text(p218pts);
+        }
+    } else {
+        if (player2.eighttn.count === 1){
+            $('#p218Imgs').text('/');
+        } else if (player2.eighttn.count === 2){
+            $('#p218Imgs').text('X');
+        } else if (player2.eighttn.count === 3){
+            player2.eighttn.closed = true;
+            $('#p218Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p117btn').click(function(){
+    var scoreClick = $(this).val();
+    player1.svntn.count ++;
+    if(player1.svntn.closed === true){
+        if(player2.svntn.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p117pts = (player1.svntn.count - 3) * 17;
+            $('#p1score').text(player1.score);
+            $('#p117pts').text(p117pts);
+        }
+    }else {
+        if (player1.svntn.count === 1){
+            $('#p117Imgs').text('/');
+        } else if (player1.svntn.count === 2){
+            $('#p117Imgs').text('X');
+        } else if (player1.svntn.count === 3){
+            player1.svntn.closed = true;
+            $('#p117Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p217btn').click(function(){
+    var scoreClick = $(this).val();
+    player2.svntn.count ++;
+    if(player2.svntn.closed === true){
+        if(player1.svntn.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p217pts = (player2.svntn.count - 3) * 17;
+            $('#p2score').text(player2.score);
+            $('#p217pts').text(p217pts);
+        }
+    }else {
+        if (player2.svntn.count === 1){
+            $('#p217Imgs').text('/');
+        } else if (player2.svntn.count === 2){
+            $('#p217Imgs').text('X');
+        } else if (player2.svntn.count === 3){
+            player2.svntn.closed = true;
+            $('#p217Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p116btn').click(function(){
+    var scoreClick = $(this).val();
+    player1.sixtn.count ++;
+    if(player1.sixtn.closed === true){
+        if(player2.sixtn.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p116pts = (player1.sixtn.count - 3) * 16;
+            $('#p1score').text(player1.score);
+            $('#p116pts').text(p116pts);
+        }
+    } else{
+        if(player1.sixtn.count === 1){
+            $('#p116Imgs').text('/');
+        } else if (player1.sixtn.count === 2){
+            $('#p116Imgs').text('X');
+        } else if (player1.sixtn.count === 3){
+            player1.sixtn.closed = true;
+            $('#p116Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p216btn').click(function(){
+    var scoreClick = $(this).val();
+    player2.sixtn.count ++;
+    if(player2.sixtn.closed === true){
+        if(player1.sixtn.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p216pts = (player2.sixtn.count - 3) * 16;
+            $('#p2score').text(player2.score);
+            $('#p216pts').text(p216pts);
+        }
+    } else{
+        if(player2.sixtn.count === 1){
+            $('#p216Imgs').text('/');
+        } else if (player2.sixtn.count === 2){
+            $('#p216Imgs').text('X');
+        } else if (player2.sixtn.count === 3){
+            player2.sixtn.closed = true;
+            $('#p216Imgs').text('(X)')
+        }
+    }
+})
+
+$('#p115btn').click(function(){
+    var scoreClick = $(this).val();
+    player1.fiftn.count ++;
+    if(player1.fiftn.closed === true){
+        if(player2.fiftn.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p115pts = (player1.fiftn.count - 3) * 15;
+            $('#p1score').text(player1.score);
+            $('#p115pts').text(p115pts)
+        }
+    } else {
+        if (player1.fiftn.count === 1){
+            $('#p115Imgs').text('/');
+        } else if (player1.fiftn.count === 2){
+            $('#p115Imgs').text('X');
+        } else if (player1.fiftn.count === 3){
+            player1.fiftn.closed = true;
+            $('#p115Imgs').text('(X)');
+        }
+    }
+})
+
+$('#p215btn').click(function(){
+    var scoreClick = $(this).val();
+    player2.fiftn.count ++;
+    if(player2.fiftn.closed === true){
+        if(player2.fiftn.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p215pts = (player2.fiftn.count - 3) * 15;
+            $('#p2score').text(player2.score);
+            $('#p215pts').text(p215pts)
+        }
+    } else {
+        if (player2.fiftn.count === 1){
+            $('#p215Imgs').text('/');
+        } else if (player2.fiftn.count === 2){
+            $('#p215Imgs').text('X');
+        } else if (player2.fiftn.count === 3){
+            player2.fiftn.closed = true;
+            $('#p215Imgs').text('(X)');
+        }
+    }
+})
+
+$('#p1Blbtn').click(function(){
+    var scoreClick = $(this).val();
+    player1.bull.count ++;
+    if (player1.bull.closed === true){
+        if (player2.bull.closed === false){
+            player1.score = (player1.score + parseFloat(scoreClick));
+            var p1BlPts = (player1.bull.count - 3) * 25;
+            $('#p1score').text(player1.score)
+            $('#p1BlPts').text(p1BlPts)
+        }
+    } else {
+        if (player1.bull.count === 1){
+            $('#p1BlImgs').text('/');
+        } else if (player1.bull.count === 2){
+            $('#p1BlImgs').text('X');
+        } else if (player1.bull.count === 3){
+            player1.bull.closed = true;
+            $('#p1BlImgs').text('(X)')
+        }
+    }
+})
+
+$('#p2Blbtn').click(function(){
+    var scoreClick = $(this).val();
+    player2.bull.count ++;
+    if (player2.bull.closed === true){
+        if (player1.bull.closed === false){
+            player2.score = (player2.score + parseFloat(scoreClick));
+            var p2BlPts = (player2.bull.count - 3) * 25;
+            $('#p2score').text(player2.score)
+            $('#p2BlPts').text(p2BlPts)
+        }
+    } else {
+        if (player2.bull.count === 1){
+            $('#p2BlImgs').text('/');
+        } else if (player2.bull.count === 2){
+            $('#p2BlImgs').text('X');
+        } else if (player2.bull.count === 3){
+            player2.bull.closed = true;
+            $('#p2BlImgs').text('(X)')
         }
     }
 })

@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script type="text/javascript" src="../public/assets/js/script.js"></script> -->
     <script src="https://code.jquery.com/jquery.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -204,6 +203,8 @@
 </body>
 <script>
 
+//player info objects
+
     var player1 = {
     score: 0,
     twty: {
@@ -267,6 +268,7 @@ var player2 = {
         closed: false
     }
 }
+// button functions
 
     $("#newGame").click(function () {
         player1.score = 0;
@@ -622,52 +624,6 @@ $('#p2Blbtn').click(function(){
         //end
     })
 
-    // $("#p120btn").click(function(){
-    //     console.log(p120Closed);
-    //     console.log(score1);
-
-    //     var scoreClick = $(this).val();
-    //     if(p120Closed === true){
-    //         if(p220Closed === false){
-    //             score1 = (score1 + parseFloat(scoreClick))
-    //         $("#p1score").text(score1)
-    //         }
-    //     } else {
-    //         if (p120Count === 0){
-    //             p120Count = 1;
-    //             $("#p120Imgs").text("/");
-    //         } else if (p120Count === 1){
-    //             p120Count = 2;
-    //             $("#p120Imgs").text("X");
-    //         } else if (p120Count === 2){
-    //             p120Count = 3;
-    //             p120Closed = true;
-    //             $("#p120Imgs").text("(X)");
-    //         }
-    //     }
-    // })
-
-    // $("#p220btn").click(function () {
-    //     var scoreClick = $(this).val();
-    //     if (p220Closed === true) {
-    //         if (p120Closed === false) {
-    //             score2 = (score2 + parseFloat(scoreClick));
-    //             $("#p2score").text(score2);
-    //         }
-    //     } else {
-    //         if (p220Count === 0) {
-    //             p220Count = 1;
-    //             $("#p220Imgs").text("/");
-    //         } else if (p220Count === 1) {
-    //             p220Count = 2;
-    //             $("#p220Imgs").text("X");
-    //         } else if (p220Count === 2) {
-    //             p220Count = 3;
-    //             p220Closed = true;
-    //             $("#p220Imgs").text("(X)")
-    //         }
-    //     }
-    // })
 
 </script>
 

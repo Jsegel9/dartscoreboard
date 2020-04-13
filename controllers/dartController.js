@@ -18,4 +18,8 @@ router.get('/301', (req,res)=>{
     res.sendFile(path.join(__dirname, "../views/301.html"))
 })
 
+router.get('/rules', (req,res)=>{
+    res.sendFile(path.join(__dirname, "../views/rules.html"))
+})
+
 module.exports = router;
